@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "description": "Level 3 (L3) cell-type taxonomy - canonical target label space",
+  "labels": [
+    "Malignant",
+    "Benign",
+    "Non neoplastic",
+    "Fibroblasts",
+    "Endothelial",
+    "Myo-fibroblasts",
+    "Fibers",
+    "Adipocytes",
+    "Leukocytes",
+    "Lymphoid cells",
+    "Macrophages/Histiocytes",
+    "Mast cells",
+    "Trombocytes",
+    "Erythrocytes",
+    "Oligodendrocytes",
+    "Microglia",
+    "Astrocyte",
+    "OPC",
+    "Ependymal cells",
+    "Schwann cells",
+    "Ganglion cells",
+    "Apoptotic",
+    "Necrotic"
+  ],
+  "parent_child_structure": {
+    "note": "Fields exist but are currently empty. Design must work without populated hierarchy."
+  }
+}
