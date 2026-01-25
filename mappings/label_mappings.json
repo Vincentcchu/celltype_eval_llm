@@ -2,30 +2,27 @@
   "version": "1.0",
   "description": "Persistent mapping store: raw labels -> L3 standardized labels",
   "mappings": {
-    "B cell": "Lymphoid cells",
-    "CD4+ T cell": "Lymphoid cells",
-    "Cancer-associated fibroblast": "Fibroblasts",
-    "Cycling lactocyte": "Non neoplastic",
-    "Cycling mammary luminal progenitor": "Non neoplastic",
+    "B_cell": "Lymphocytes",
+    "Dendritic": "Lymphocytes",
     "Endothelial": "Endothelial",
     "Fibroblast": "Fibroblasts",
+    "Malignant": "Malignant",
+    "Mast": "Mast cells",
+    "Myeloid": "Macrophages/Histiocytes",
+    "T_cell": "Lymphocytes",
+    "Stromal": "Fibroblasts",
+    "": "Non neoplastic",
+    "Epithelial": "Non neoplastic",
+    "Lymphovascular": "Endothelial",
     "Macrophage": "Macrophages/Histiocytes",
-    "Mammary basal cell": "Non neoplastic",
-    "Mast cell": "Mast cells",
-    "NK/CD8+ T cell": "Lymphoid cells",
-    "PIP+ mammary luminal cell": "Non neoplastic",
     "Pericyte": "Non neoplastic",
-    "Plasma cell": "Lymphoid cells",
-    "Regulatory T cell": "Lymphoid cells",
-    "SAA2+ mammary luminal progenitor": "Non neoplastic",
-    "SCGB3A1+ mammary luminal progenitor": "Non neoplastic",
-    "Secretoglobin mammary luminal cell": "Non neoplastic",
-    "Tumour-associated macrophage": "Macrophages/Histiocytes",
-    "cDC": "Leukocytes",
-    "pDC": "Leukocytes"
+    "Plasma": "Plasma cells",
+    "Monocyte": "Macrophages/Histiocytes",
+    "NK_cell": "Lymphocytes",
+    "Plasmablast": "Plasma cells"
   },
   "metadata": {
-    "last_updated": "2025-12-27T18:56:10.117552",
-    "total_mappings": 21
+    "last_updated": "2026-01-25T13:12:21.635933",
+    "total_mappings": 18
   }
 }

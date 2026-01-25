@@ -5,24 +5,33 @@
     "Malignant",
     "Benign",
     "Non neoplastic",
+
     "Fibroblasts",
     "Endothelial",
     "Myo-fibroblasts",
     "Fibers",
     "Adipocytes",
-    "Leukocytes",
-    "Lymphoid cells",
-    "Macrophages/Histiocytes",
-    "Mast cells",
+
     "Trombocytes",
     "Erythrocytes",
+
+    "Eosinophils",
+    "Basophils",
+    "Neutrophils",
+
+    "Plasma cells",
+    "Lymphocytes",
+
+    "Macrophages/Histiocytes",
+    "Mast cells",
+
     "Oligodendrocytes",
     "Microglia",
     "Astrocyte",
-    "OPC",
     "Ependymal cells",
     "Schwann cells",
     "Ganglion cells",
+
     "Apoptotic",
     "Necrotic"
   ],
