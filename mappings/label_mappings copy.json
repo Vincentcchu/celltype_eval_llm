@@ -1,0 +1,80 @@
+{
+  "version": "1.3-lymphoid_unspecified",
+  "description": "Persistent mapping store: raw labels -> L3 standardized labels",
+  "mappings": {
+    "B_cell": "Lymphoid",
+    "T_cell": "Lymphoid",
+    "NK_cell": "Lymphoid",
+    "T_NK_cell": "Lymphoid",
+    "ILC": "Lymphoid",
+    "Lymphoid": "Lymphoid",
+
+    "Monocyte": "Myeloid",
+    "Macrophage": "Myeloid",
+    "Dendritic": "Myeloid",
+    "Myeloid": "Myeloid",
+    "Neutrophil": "Myeloid",
+    "Granulocyte": "Myeloid",
+    "Granulocytes": "Myeloid",
+    "Mast": "Myeloid",
+    "Osteoclast": "Myeloid",
+    "Langerhans": "Myeloid",
+    "Megakaryocyte": "Myeloid",
+    "Erythrocyte": "Other_non_neoplastic",
+    "Erythroblast": "Other_non_neoplastic",
+
+    "Endothelial": "Endothelial",
+    "Lymphovascular": "Endothelial",
+
+    "Fibroblast": "Fibroblasts",
+    "Stromal": "Fibroblasts",
+    "Mesenchymal": "Fibroblasts",
+    "MSC": "Fibroblasts",
+    "Pericyte": "Fibroblasts",
+    "Smooth_muscle": "Fibroblasts",
+    "Vascular_smooth_muscle": "Fibroblasts",
+    "Myofibroblast": "Fibroblasts",
+    "Myoblast": "Fibroblasts",
+    "Ovary_stromal": "Fibroblasts",
+    "Stellate": "Fibroblasts",
+
+    "Epithelial": "Epithelial_non_malignant",
+    "Keratinocyte": "Epithelial_non_malignant",
+    "Melanocyte": "Epithelial_non_malignant",
+    "Tuft": "Epithelial_non_malignant",
+    "Mesothelial": "Epithelial_non_malignant",
+    "Endocrine": "Epithelial_non_malignant",
+    "Hepatocyte": "Epithelial_non_malignant",
+
+    "Malignant": "Malignant",
+    "Serrated_specific_cells": "Benign",
+    "Adenoma_specific_cell": "Benign",
+
+    "Plasma": "Lymphoid",
+    "Plasmablast": "Lymphoid",
+
+    "Glia": "Other_non_neoplastic",
+    "Astrocyte": "Other_non_neoplastic",
+    "Oligodendrocyte": "Other_non_neoplastic",
+    "OPC": "Other_non_neoplastic",
+    "Schwann": "Other_non_neoplastic",
+    "Neuron": "Other_non_neoplastic",
+
+    "Adipocyte": "Other_non_neoplastic",
+    "Chondrocyte": "Other_non_neoplastic",
+    "Osteoblast": "Other_non_neoplastic",
+    "Osteoblast_proli": "Other_non_neoplastic",
+    "Myocyte": "Other_non_neoplastic",
+    "Mesangial": "Other_non_neoplastic",
+
+    "Lin-CD34+ stem/progenitor": "Other_non_neoplastic",
+    "HSC": "Other_non_neoplastic",
+    "ESC": "Other_non_neoplastic",
+    "hpc-like": "Other_non_neoplastic",
+    "Undifferentiated": "Other/unknown"
+  },
+  "metadata": {
+    "last_updated": "2026-02-23T11:06:21.416534",
+    "total_mappings": 104
+  }
+}

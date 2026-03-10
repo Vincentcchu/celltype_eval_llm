@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "description": "Level 3 (L3) cell-type taxonomy - canonical target label space",
+  "labels": [
+    "Benign",
+    "Other_non_neoplastic",
+    "B_cell",
+    "Myeloid",
+    "Epithelial_non_malignant",
+    "Endothelial",
+    "Erythroid",
+    "Fibroblasts",
+    "Granulocytes",
+    "T_NK",
+    "Lymphoid_unspecified",
+    "Mast",
+    "Perivascular",
+    "Plasma",
+    "Malignant",
+    "Other_unknown"
+  ],
+  "parent_child_structure": {
+    "note": "Fields exist but are currently empty. Design must work without populated hierarchy."
+  }
+}

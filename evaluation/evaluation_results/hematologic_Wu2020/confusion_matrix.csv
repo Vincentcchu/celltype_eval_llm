@@ -1,0 +1,7 @@
+True_Label,Lymphoid,Malignant,Myeloid,Non neoplastic,Other/unknown,Other_non_neoplastic
+Lymphoid,127,0,0,8100,0,0
+Malignant,7974,0,0,89056,0,0
+Myeloid,1433,0,0,76426,0,0
+Non neoplastic,0,0,0,0,0,0
+Other/unknown,377,0,0,7696,0,0
+Other_non_neoplastic,28,0,0,3354,0,0

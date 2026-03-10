@@ -104,5 +104,9 @@ results/
 outputs/
 *.json.bak
 
+# Evaluation automation outputs
+evaluation/executed_notebooks/
+evaluation/evaluation_report_*.json
+
 # Mapping store backups
 mappings/*.json.bak

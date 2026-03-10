@@ -104,12 +104,34 @@ Example response format:
 """
         return prompt
     
-    def map_label(self, raw_label: str) -> Dict[str, any]:
+    def _create_retry_prompt(self, raw_label: str, invalid_label: str) -> str:
+        """Create a stronger prompt for retry after invalid response."""
+        prompt = f"""CRITICAL: You MUST choose a label from the EXACT list provided below. Do not make up new labels.
+
+Raw cell-type label: "{raw_label}"
+
+You previously returned "{invalid_label}" which is NOT in the allowed list.
+
+ALLOWED L3 LABELS (you MUST choose EXACTLY one of these, copy it character-by-character):
+{chr(10).join(f"- {label}" for label in self.l3_labels)}
+
+Instructions:
+1. Look at the list above carefully
+2. Select the single BEST MATCH from that exact list
+3. Copy the label EXACTLY as written above (case-sensitive)
+4. Return valid JSON with "selected_label", "confidence", and "rationale"
+
+Do not create variations or new labels - ONLY use labels from the list above.
+"""
+        return prompt
+    
+    def map_label(self, raw_label: str, max_retries: int = 2) -> Dict[str, any]:
         """
         Map a raw label to an L3 label using LLM semantic matching.
         
         Args:
             raw_label: The raw cell-type label to map.
+            max_retries: Maximum number of attempts (default: 2)
             
         Returns:
             Dictionary with:
@@ -127,77 +149,75 @@ Example response format:
                     "rationale": "Exact match with L3 vocabulary"
                 }
         
-        # Use LLM for semantic matching
-        prompt = self._create_prompt(raw_label)
-        
-        try:
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": "You are a cell-type taxonomy expert. Always respond with valid JSON."
-                    },
-                    {"role": "user", "content": prompt}
-                ],
-                response_format={"type": "json_object"},
-                temperature=0.0,  # Deterministic output
-                max_tokens=500
-            )
-            
-            result_text = response.choices[0].message.content
-            result = json.loads(result_text)
-            
-            # Validate that selected label is in vocabulary
-            selected = result.get("selected_label")
-            if selected not in self.l3_labels:
-                logger.error(
-                    f"LLM returned invalid label '{selected}' for '{raw_label}'. "
-                    f"Using fallback."
+        # Try LLM with retries
+        last_invalid_label = None
+        for attempt in range(1, max_retries + 1):
+            try:
+                # Use regular prompt on first attempt, retry prompt on subsequent attempts
+                if attempt == 1:
+                    prompt = self._create_prompt(raw_label)
+                else:
+                    prompt = self._create_retry_prompt(raw_label, last_invalid_label)
+                    logger.warning(f"Retry attempt {attempt}/{max_retries} for '{raw_label}'")
+                
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": "You are a cell-type taxonomy expert. Always respond with valid JSON."
+                        },
+                        {"role": "user", "content": prompt}
+                    ],
+                    response_format={"type": "json_object"},
+                    temperature=0.0,  # Deterministic output
+                    max_tokens=500
                 )
-                # Fallback to closest match
-                selected = self._fuzzy_match_fallback(raw_label)
-                result["selected_label"] = selected
-                result["confidence"] = 0.5
-                result["rationale"] = f"Fallback mapping after LLM error"
-            
-            logger.info(
-                f"LLM mapping: '{raw_label}' -> '{result['selected_label']}' "
-                f"(confidence: {result.get('confidence', 'N/A')})"
-            )
-            
-            return result
-            
-        except Exception as e:
-            logger.error(f"Error calling LLM for label '{raw_label}': {e}")
-            # Fallback to simple fuzzy matching
-            selected = self._fuzzy_match_fallback(raw_label)
-            return {
-                "selected_label": selected,
-                "confidence": 0.3,
-                "rationale": f"Fallback mapping due to LLM error: {str(e)}"
-            }
-    
-    def _fuzzy_match_fallback(self, raw_label: str) -> str:
-        """
-        Simple fallback fuzzy matching if LLM fails.
-        Checks for substring matches (case-insensitive).
-        """
-        raw_lower = raw_label.lower()
+                
+                result_text = response.choices[0].message.content
+                result = json.loads(result_text)
+                
+                # Validate that selected label is in vocabulary
+                selected = result.get("selected_label")
+                if selected in self.l3_labels:
+                    # Success!
+                    logger.info(
+                        f"LLM mapping (attempt {attempt}): '{raw_label}' -> '{selected}' "
+                        f"(confidence: {result.get('confidence', 'N/A')})"
+                    )
+                    return result
+                else:
+                    # Invalid label - prepare for retry
+                    last_invalid_label = selected
+                    logger.error(
+                        f"Attempt {attempt}/{max_retries}: LLM returned invalid label '{selected}' "
+                        f"for '{raw_label}'. Valid labels: {self.l3_labels}"
+                    )
+                    
+                    # If this was the last attempt, fall through to final fallback
+                    if attempt == max_retries:
+                        break
+                    
+            except json.JSONDecodeError as e:
+                logger.error(f"Attempt {attempt}/{max_retries}: JSON parse error for '{raw_label}': {e}")
+                if attempt == max_retries:
+                    break
+                    
+            except Exception as e:
+                logger.error(f"Attempt {attempt}/{max_retries}: Error calling LLM for '{raw_label}': {e}")
+                if attempt == max_retries:
+                    break
         
-        # Try to find L3 label as substring in raw label
-        for l3_label in self.l3_labels:
-            if l3_label.lower() in raw_lower:
-                return l3_label
-        
-        # Try to find raw label as substring in L3 labels
-        for l3_label in self.l3_labels:
-            if raw_lower in l3_label.lower():
-                return l3_label
-        
-        # Default to most generic label
-        logger.warning(f"No good match found for '{raw_label}', defaulting to 'Non neoplastic'")
-        return "Non neoplastic"
+        # If we get here, all retries failed - use simple fallback
+        logger.error(
+            f"All {max_retries} attempts failed for '{raw_label}'. "
+            f"Using 'Other/unknown' as last resort."
+        )
+        return {
+            "selected_label": "Other/unknown",
+            "confidence": 0.0,
+            "rationale": f"Fallback after {max_retries} failed LLM attempts"
+        }
     
     def map_labels_batch(self, raw_labels: List[str]) -> Dict[str, Dict]:
         """

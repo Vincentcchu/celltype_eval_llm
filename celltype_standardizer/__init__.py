@@ -6,11 +6,12 @@ and evaluate model predictions after standardization.
 """
 
 from .standardize import standardize_h5ad_and_update_mapping
-from .evaluate import evaluate_h5ad
+from .evaluate import evaluate_h5ad, evaluate_binary_classification
 
 __version__ = "1.0.0"
 
 __all__ = [
     "standardize_h5ad_and_update_mapping",
     "evaluate_h5ad",
+    "evaluate_binary_classification",
 ]
