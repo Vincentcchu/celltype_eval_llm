@@ -18,9 +18,25 @@ Usage:
 """
 
 import argparse
+import json
 import logging
+import os
 import sys
 from pathlib import Path
+
+# Load API key from config.json if not already set correctly
+# This ensures we use the correct key from config, overriding any incorrect env vars
+try:
+    script_dir = Path(__file__).parent
+    config_path = script_dir.parent / 'config' / 'config.json'
+    if config_path.exists():
+        with open(config_path, 'r') as f:
+            config = json.load(f)
+        api_key = config.get('openai', {}).get('api_key')
+        if api_key and api_key != 'YOUR_OPENAI_API_KEY_HERE':
+            os.environ['OPENAI_API_KEY'] = api_key
+except Exception:
+    pass  # Will fall back to existing env var or llm_judge's config loading
 
 # Add parent directory to path to import celltype_standardizer
 sys.path.insert(0, str(Path(__file__).parent.parent))
