@@ -1,0 +1,187 @@
+{
+  "accuracy": 0.7624254473161034,
+  "macro_f1": 0.3806818181818182,
+  "weighted_f1": 0.7652720043376107,
+  "confusion_matrix": {
+    "labels": [
+      "Benign",
+      "Endothelial",
+      "Epithelial_non_malignant",
+      "Fibroblasts",
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        446,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        221,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        66,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1625,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        268,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        378,
+        0,
+        0,
+        9
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Benign": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Endothelial": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 446
+    },
+    "Epithelial_non_malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Fibroblasts": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 221
+    },
+    "Lymphoid": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 71
+    },
+    "Malignant": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 1625
+    },
+    "Myeloid": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 268
+    },
+    "Other_non_neoplastic": {
+      "precision": 1.0,
+      "recall": 0.023255813953488372,
+      "f1_score": 0.045454545454545456,
+      "support": 387
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Malignant": 1625,
+      "Endothelial": 446,
+      "Lymphoid": 378,
+      "Epithelial_non_malignant": 268,
+      "Fibroblasts": 221,
+      "Benign": 66,
+      "Other_non_neoplastic": 9,
+      "Myeloid": 5
+    },
+    "ground_truth": {
+      "Malignant": 1625,
+      "Endothelial": 446,
+      "Other_non_neoplastic": 387,
+      "Myeloid": 268,
+      "Fibroblasts": 221,
+      "Lymphoid": 71
+    }
+  },
+  "dataset_info": {
+    "total_cells": 3018,
+    "original_pred_cells": 3018,
+    "original_gt_cells": 3018,
+    "matched_cells": 3018,
+    "cells_filtered": false,
+    "unique_pred_labels": 8,
+    "unique_gt_labels": 8,
+    "standardized_pred_labels": 8,
+    "standardized_gt_labels": 6,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2790,
+    "last_updated": "2026-04-24T01:33:54.017686",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

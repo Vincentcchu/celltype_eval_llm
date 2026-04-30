@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.9819819819819819,
+  "macro_f1": 0.7281727517341825,
+  "weighted_f1": 0.9807104994957431,
+  "confusion_matrix": {
+    "labels": [
+      "Endothelial",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        46
+      ],
+      [
+        0,
+        9916,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2396,
+        0
+      ],
+      [
+        0,
+        0,
+        248,
+        3711
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Endothelial": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 46
+    },
+    "Malignant": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 9916
+    },
+    "Myeloid": {
+      "precision": 0.9062027231467473,
+      "recall": 1.0,
+      "f1_score": 0.9507936507936507,
+      "support": 2396
+    },
+    "Other_non_neoplastic": {
+      "precision": 0.98775618844823,
+      "recall": 0.9373579186663299,
+      "f1_score": 0.9618973561430794,
+      "support": 3959
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Malignant": 9916,
+      "Other_non_neoplastic": 3757,
+      "Myeloid": 2644
+    },
+    "ground_truth": {
+      "Malignant": 9916,
+      "Other_non_neoplastic": 3959,
+      "Myeloid": 2396,
+      "Endothelial": 46
+    }
+  },
+  "dataset_info": {
+    "total_cells": 16317,
+    "original_pred_cells": 16317,
+    "original_gt_cells": 16317,
+    "matched_cells": 16317,
+    "cells_filtered": false,
+    "unique_pred_labels": 5,
+    "unique_gt_labels": 5,
+    "standardized_pred_labels": 3,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2789,
+    "last_updated": "2026-04-21T19:42:54.074716",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

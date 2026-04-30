@@ -1,6 +1,0 @@
-Cell_Type_L3,precision,recall,f1_score,support
-Lymphoid,0.004254390749427294,0.004343951882379149,0.004298704877376688,8978.0
-Malignant,0.0,0.0,0.0,18854.0
-Myeloid,0.0,0.0,0.0,2246.0
-Non neoplastic,0.0,0.0,0.0,0.0
-Other/unknown,0.0,0.0,0.0,17938.0

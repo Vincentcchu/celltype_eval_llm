@@ -1,0 +1,77 @@
+{
+  "accuracy": 0.5473186119873817,
+  "macro_f1": 0.3333333333333333,
+  "weighted_f1": 0.5473186119873817,
+  "confusion_matrix": {
+    "labels": [
+      "Endothelial",
+      "Epithelial_non_malignant",
+      "Malignant"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1041,
+        0
+      ],
+      [
+        861,
+        0,
+        0
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Endothelial": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Epithelial_non_malignant": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 1041
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 861
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Epithelial_non_malignant": 1041,
+      "Endothelial": 861
+    },
+    "ground_truth": {
+      "Epithelial_non_malignant": 1041,
+      "Malignant": 861
+    }
+  },
+  "dataset_info": {
+    "total_cells": 1902,
+    "original_pred_cells": 1902,
+    "original_gt_cells": 1902,
+    "matched_cells": 1902,
+    "cells_filtered": false,
+    "unique_pred_labels": 2,
+    "unique_gt_labels": 2,
+    "standardized_pred_labels": 2,
+    "standardized_gt_labels": 2,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 1297,
+    "last_updated": "2026-03-18T17:10:50.313613",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

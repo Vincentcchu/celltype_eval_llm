@@ -1,0 +1,7 @@
+Cell_Type_L3,precision,recall,f1_score,support
+Endothelial,1.0,1.0,1.0,3144.0
+Fibroblasts,0.0,0.0,0.0,3469.0
+Lymphoid,1.0,1.0,1.0,4635.0
+Malignant,0.0,0.0,0.0,37449.0
+Myeloid,1.0,1.0,1.0,8214.0
+Other_non_neoplastic,0.35771153490094426,1.0,0.5269330424110187,1932.0

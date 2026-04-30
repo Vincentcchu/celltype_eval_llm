@@ -1,0 +1,62 @@
+{
+  "accuracy": 0.10144293834717971,
+  "macro_f1": 0.09210003969829297,
+  "weighted_f1": 0.018685797297773477,
+  "confusion_matrix": {
+    "labels": [
+      "Malignant",
+      "Myeloid"
+    ],
+    "matrix": [
+      [
+        0,
+        2055
+      ],
+      [
+        0,
+        232
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 2055
+    },
+    "Myeloid": {
+      "precision": 0.10144293834717971,
+      "recall": 1.0,
+      "f1_score": 0.18420007939658595,
+      "support": 232
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Myeloid": 2287
+    },
+    "ground_truth": {
+      "Malignant": 2055,
+      "Myeloid": 232
+    }
+  },
+  "dataset_info": {
+    "total_cells": 2287,
+    "original_pred_cells": 2287,
+    "original_gt_cells": 2287,
+    "matched_cells": 2287,
+    "cells_filtered": false,
+    "unique_pred_labels": 2,
+    "unique_gt_labels": 2,
+    "standardized_pred_labels": 1,
+    "standardized_gt_labels": 2,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 1297,
+    "last_updated": "2026-03-18T17:10:50.313613",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

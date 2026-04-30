@@ -1,0 +1,115 @@
+{
+  "accuracy": 0.665859255481897,
+  "macro_f1": 0.6,
+  "weighted_f1": 0.665859255481897,
+  "confusion_matrix": {
+    "labels": [
+      "Epithelial_non_malignant",
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5310,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        12124,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3458,
+        0
+      ],
+      [
+        10484,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Epithelial_non_malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Lymphoid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 5310
+    },
+    "Malignant": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 12124
+    },
+    "Myeloid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 3458
+    },
+    "Other_non_neoplastic": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 10484
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Malignant": 12124,
+      "Epithelial_non_malignant": 10484,
+      "Lymphoid": 5310,
+      "Myeloid": 3458
+    },
+    "ground_truth": {
+      "Malignant": 12124,
+      "Other_non_neoplastic": 10484,
+      "Lymphoid": 5310,
+      "Myeloid": 3458
+    }
+  },
+  "dataset_info": {
+    "total_cells": 31376,
+    "original_pred_cells": 31376,
+    "original_gt_cells": 31376,
+    "matched_cells": 31376,
+    "cells_filtered": false,
+    "unique_pred_labels": 8,
+    "unique_gt_labels": 8,
+    "standardized_pred_labels": 4,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2158,
+    "last_updated": "2026-03-26T12:44:33.268709",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

@@ -1,0 +1,7 @@
+True_Label,Benign,Fibroblasts,Lymphoid,Malignant,Myeloid,Other_non_neoplastic
+Benign,0,0,0,0,0,0
+Fibroblasts,0,0,0,0,0,0
+Lymphoid,0,0,0,0,0,0
+Malignant,93,14,1,6,0,2145
+Myeloid,0,1,0,0,9,86
+Other_non_neoplastic,137,0,0,0,0,95

@@ -14,6 +14,27 @@ from openai import OpenAI
 logger = logging.getLogger(__name__)
 
 
+def _load_api_key_from_config() -> Optional[str]:
+    """
+    Load API key from config.json file.
+    
+    Returns:
+        API key string if found in config, None otherwise.
+    """
+    try:
+        project_root = Path(__file__).parent.parent
+        config_file = project_root / "config" / "config.json"
+        
+        if config_file.exists():
+            with open(config_file, 'r') as f:
+                config = json.load(f)
+            return config.get("openai", {}).get("api_key")
+    except Exception as e:
+        logger.debug(f"Could not load API key from config: {e}")
+    
+    return None
+
+
 class L3Vocabulary:
     """Manages the L3 vocabulary list."""
     
@@ -55,7 +76,8 @@ class LLMSemanticJudge:
         Initialize the semantic judge.
         
         Args:
-            api_key: OpenAI API key. If None, reads from OPENAI_API_KEY env var.
+            api_key: OpenAI API key. If None, reads from OPENAI_API_KEY env var,
+                     then from config/config.json if not found in environment.
             model: OpenAI model to use for semantic matching.
             vocab_file: Path to L3 vocabulary file. If None, uses default.
         """
@@ -65,11 +87,17 @@ class LLMSemanticJudge:
         
         # Initialize OpenAI client
         if api_key is None:
+            # Try environment variable first
             api_key = os.environ.get("OPENAI_API_KEY")
+            
+            # If not in environment, try loading from config.json
+            if not api_key:
+                api_key = _load_api_key_from_config()
+            
             if not api_key:
                 raise ValueError(
-                    "OpenAI API key not provided. Set OPENAI_API_KEY environment variable "
-                    "or pass api_key parameter."
+                    "OpenAI API key not provided. Set OPENAI_API_KEY environment variable, "
+                    "add it to config/config.json, or pass api_key parameter."
                 )
         
         self.client = OpenAI(api_key=api_key)
@@ -156,9 +184,17 @@ Do not create variations or new labels - ONLY use labels from the list above.
                 # Use regular prompt on first attempt, retry prompt on subsequent attempts
                 if attempt == 1:
                     prompt = self._create_prompt(raw_label)
+                    logger.info(f"\n{'='*60}")
+                    logger.info(f"LLM ATTEMPT {attempt}/{max_retries} for: '{raw_label}'")
+                    logger.info(f"{'='*60}")
                 else:
                     prompt = self._create_retry_prompt(raw_label, last_invalid_label)
-                    logger.warning(f"Retry attempt {attempt}/{max_retries} for '{raw_label}'")
+                    logger.warning(f"\n{'='*60}")
+                    logger.warning(f"RETRY ATTEMPT {attempt}/{max_retries} for '{raw_label}'")
+                    logger.warning(f"Previous invalid label: '{last_invalid_label}'")
+                    logger.warning(f"{'='*60}")
+                
+                logger.debug(f"Prompt sent to LLM:\n{prompt}\n")
                 
                 response = self.client.chat.completions.create(
                     model=self.model,
@@ -175,28 +211,39 @@ Do not create variations or new labels - ONLY use labels from the list above.
                 )
                 
                 result_text = response.choices[0].message.content
+                logger.info(f"LLM raw response:\n{result_text}\n")
+                
                 result = json.loads(result_text)
+                logger.info(f"Parsed result: {json.dumps(result, indent=2)}")
                 
                 # Validate that selected label is in vocabulary
                 selected = result.get("selected_label")
                 if selected in self.l3_labels:
                     # Success!
-                    logger.info(
-                        f"LLM mapping (attempt {attempt}): '{raw_label}' -> '{selected}' "
-                        f"(confidence: {result.get('confidence', 'N/A')})"
-                    )
+                    logger.info(f"✓ VALID LABEL SELECTED")
+                    logger.info(f"  Raw label:       '{raw_label}'")
+                    logger.info(f"  Selected L3:     '{selected}'")
+                    logger.info(f"  Confidence:      {result.get('confidence', 'N/A')}")
+                    logger.info(f"  Rationale:       {result.get('rationale', 'N/A')}")
+                    logger.info(f"  Attempts needed: {attempt}")
+                    logger.info(f"{'='*60}\n")
                     return result
                 else:
                     # Invalid label - prepare for retry
                     last_invalid_label = selected
-                    logger.error(
-                        f"Attempt {attempt}/{max_retries}: LLM returned invalid label '{selected}' "
-                        f"for '{raw_label}'. Valid labels: {self.l3_labels}"
-                    )
+                    logger.error(f"✗ INVALID LABEL RETURNED")
+                    logger.error(f"  Raw label:       '{raw_label}'")
+                    logger.error(f"  Invalid label:   '{selected}'")
+                    logger.error(f"  Valid labels:    {self.l3_labels}")
+                    logger.error(f"  Confidence:      {result.get('confidence', 'N/A')}")
+                    logger.error(f"  Rationale:       {result.get('rationale', 'N/A')}")
                     
                     # If this was the last attempt, fall through to final fallback
                     if attempt == max_retries:
+                        logger.error(f"  No more retries available.")
                         break
+                    else:
+                        logger.warning(f"  Preparing retry with stronger prompt...")
                     
             except json.JSONDecodeError as e:
                 logger.error(f"Attempt {attempt}/{max_retries}: JSON parse error for '{raw_label}': {e}")
@@ -208,16 +255,15 @@ Do not create variations or new labels - ONLY use labels from the list above.
                 if attempt == max_retries:
                     break
         
-        # If we get here, all retries failed - use simple fallback
-        logger.error(
-            f"All {max_retries} attempts failed for '{raw_label}'. "
-            f"Using 'Other/unknown' as last resort."
+        # If we get here, all retries failed
+        # This should be extremely rare - raise an error to surface the issue
+        error_msg = (
+            f"LLM failed to select a valid label from the vocabulary after {max_retries} attempts for '{raw_label}'. "
+            f"Last invalid label returned: '{last_invalid_label}'. "
+            f"Valid labels: {self.l3_labels}"
         )
-        return {
-            "selected_label": "Other/unknown",
-            "confidence": 0.0,
-            "rationale": f"Fallback after {max_retries} failed LLM attempts"
-        }
+        logger.error(error_msg)
+        raise ValueError(error_msg)
     
     def map_labels_batch(self, raw_labels: List[str]) -> Dict[str, Dict]:
         """

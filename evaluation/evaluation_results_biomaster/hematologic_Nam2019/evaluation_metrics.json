@@ -1,0 +1,95 @@
+{
+  "accuracy": 0.10207235908273665,
+  "macro_f1": 0.08628970330974567,
+  "weighted_f1": 0.020873182338716084,
+  "confusion_matrix": {
+    "labels": [
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        72,
+        0,
+        0,
+        427
+      ],
+      [
+        309,
+        0,
+        0,
+        22297
+      ],
+      [
+        9,
+        0,
+        0,
+        5423
+      ],
+      [
+        2,
+        0,
+        0,
+        3164
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Lymphoid": {
+      "precision": 0.1836734693877551,
+      "recall": 0.14428857715430862,
+      "f1_score": 0.16161616161616163,
+      "support": 499
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 22606
+    },
+    "Myeloid": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 5432
+    },
+    "Other_non_neoplastic": {
+      "precision": 0.10105074893807288,
+      "recall": 0.9993682880606444,
+      "f1_score": 0.18354265162282102,
+      "support": 3166
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Other_non_neoplastic": 31311,
+      "Lymphoid": 392
+    },
+    "ground_truth": {
+      "Malignant": 22606,
+      "Myeloid": 5432,
+      "Other_non_neoplastic": 3166,
+      "Lymphoid": 499
+    }
+  },
+  "dataset_info": {
+    "total_cells": 31703,
+    "original_pred_cells": 31703,
+    "original_gt_cells": 31703,
+    "matched_cells": 31703,
+    "cells_filtered": false,
+    "unique_pred_labels": 2,
+    "unique_gt_labels": 7,
+    "standardized_pred_labels": 2,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2790,
+    "last_updated": "2026-04-24T01:33:54.017686",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

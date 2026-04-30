@@ -82,8 +82,9 @@ class BatchEvaluator:
         logger.info(f"\n{'='*60}")
         logger.info(f"Evaluating: {pair.tissue}/{pair.dataset_name}")
         logger.info(f"{'='*60}")
+        pred_label = pair.pred_file.name if isinstance(pair.pred_file, Path) else f"<AnnData: {pair.dataset_name}>"
         logger.info(f"Ground truth: {pair.gt_file.name}")
-        logger.info(f"Prediction:   {pair.pred_file.name}")
+        logger.info(f"Prediction:   {pred_label}")
         
         try:
             # Always use original ground truth file (standardize fresh each time)

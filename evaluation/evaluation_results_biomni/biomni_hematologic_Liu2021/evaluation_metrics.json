@@ -1,0 +1,78 @@
+{
+  "accuracy": 0.7599285199903982,
+  "macro_f1": 0.5949124315565469,
+  "weighted_f1": 0.6684254454341313,
+  "confusion_matrix": {
+    "labels": [
+      "Lymphoid",
+      "Malignant",
+      "Myeloid"
+    ],
+    "matrix": [
+      [
+        36552,
+        0,
+        0
+      ],
+      [
+        17267,
+        0,
+        0
+      ],
+      [
+        735,
+        0,
+        20432
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Lymphoid": {
+      "precision": 0.67001503097848,
+      "recall": 1.0,
+      "f1_score": 0.8024059886286304,
+      "support": 36552
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 17267
+    },
+    "Myeloid": {
+      "precision": 1.0,
+      "recall": 0.9652761373836632,
+      "f1_score": 0.9823313060410106,
+      "support": 21167
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Lymphoid": 54554,
+      "Myeloid": 20432
+    },
+    "ground_truth": {
+      "Lymphoid": 36552,
+      "Myeloid": 21167,
+      "Malignant": 17267
+    }
+  },
+  "dataset_info": {
+    "total_cells": 74986,
+    "original_pred_cells": 74986,
+    "original_gt_cells": 74986,
+    "matched_cells": 74986,
+    "cells_filtered": false,
+    "unique_pred_labels": 5,
+    "unique_gt_labels": 6,
+    "standardized_pred_labels": 2,
+    "standardized_gt_labels": 3,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2789,
+    "last_updated": "2026-04-21T19:42:54.074716",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.2616471627290793,
+  "macro_f1": 0.4233878136148869,
+  "weighted_f1": 0.18826188503758684,
+  "confusion_matrix": {
+    "labels": [
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        499,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        22606
+      ],
+      [
+        802,
+        0,
+        4630,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3166
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Lymphoid": {
+      "precision": 0.3835511145272867,
+      "recall": 1.0,
+      "f1_score": 0.5544444444444444,
+      "support": 499
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 22606
+    },
+    "Myeloid": {
+      "precision": 1.0,
+      "recall": 0.8523564064801178,
+      "f1_score": 0.9202941761081296,
+      "support": 5432
+    },
+    "Other_non_neoplastic": {
+      "precision": 0.1228465000776036,
+      "recall": 1.0,
+      "f1_score": 0.21881263390697353,
+      "support": 3166
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Other_non_neoplastic": 25772,
+      "Myeloid": 4630,
+      "Lymphoid": 1301
+    },
+    "ground_truth": {
+      "Malignant": 22606,
+      "Myeloid": 5432,
+      "Other_non_neoplastic": 3166,
+      "Lymphoid": 499
+    }
+  },
+  "dataset_info": {
+    "total_cells": 31703,
+    "original_pred_cells": 31703,
+    "original_gt_cells": 31703,
+    "matched_cells": 31703,
+    "cells_filtered": false,
+    "unique_pred_labels": 7,
+    "unique_gt_labels": 7,
+    "standardized_pred_labels": 3,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 1297,
+    "last_updated": "2026-03-18T17:10:50.313613",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

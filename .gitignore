@@ -108,5 +108,9 @@ outputs/
 evaluation/executed_notebooks/
 evaluation/evaluation_report_*.json
 
+# Evaluation result exports
+evaluation/evaluation_results/
+evaluation/evaluation_results_*/
+
 # Mapping store backups
 mappings/*.json.bak

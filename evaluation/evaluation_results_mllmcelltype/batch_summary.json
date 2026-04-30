@@ -1,0 +1,738 @@
+{
+  "timestamp": "2026-03-19T14:43:46.902514",
+  "total_datasets": 73,
+  "successful": 73,
+  "failed": 0,
+  "datasets": [
+    {
+      "tissue": "brain",
+      "dataset": "Choudhury2022",
+      "status": "success",
+      "accuracy": 0.30462416939992865,
+      "macro_f1": 0.5878221737351698,
+      "weighted_f1": 0.28909189942623736,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Choudhury2022",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Filbin2018",
+      "status": "success",
+      "accuracy": 0.12678778507924238,
+      "macro_f1": 0.39013343126453665,
+      "weighted_f1": 0.05238997609590936,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Filbin2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Gojo2020",
+      "status": "success",
+      "accuracy": 0.06914972547855765,
+      "macro_f1": 0.2058950555164201,
+      "weighted_f1": 0.08137463900597208,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Gojo2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Neftel2019",
+      "status": "success",
+      "accuracy": 0.18424433301562307,
+      "macro_f1": 0.37014589060695025,
+      "weighted_f1": 0.14811485492949547,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Neftel2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Tirosh2016",
+      "status": "success",
+      "accuracy": 0.0540602714515758,
+      "macro_f1": 0.25,
+      "weighted_f1": 0.0540602714515758,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Tirosh2016",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Venteicher2017",
+      "status": "success",
+      "accuracy": 0.18072859170477842,
+      "macro_f1": 0.497819673560674,
+      "weighted_f1": 0.15901825931323751,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Venteicher2017",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Wang2019",
+      "status": "success",
+      "accuracy": 0.3742722314150886,
+      "macro_f1": 0.34105862951166915,
+      "weighted_f1": 0.24075227250850714,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Wang2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "brain",
+      "dataset": "Yuan2018",
+      "status": "success",
+      "accuracy": 0.11482368763922161,
+      "macro_f1": 0.3359477124183006,
+      "weighted_f1": 0.10820450569165589,
+      "results_dir": "evaluation_results_mllmcelltype/brain_Yuan2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Bassez2021",
+      "status": "success",
+      "accuracy": 0.316027974496437,
+      "macro_f1": 0.13014235654641146,
+      "weighted_f1": 0.34415557164398525,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Bassez2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Chung2017",
+      "status": "success",
+      "accuracy": 0.3844660194174757,
+      "macro_f1": 0.6,
+      "weighted_f1": 0.3844660194174757,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Chung2017",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Gao2021",
+      "status": "success",
+      "accuracy": 0.2816799420709631,
+      "macro_f1": 0.5572540028111366,
+      "weighted_f1": 0.2278838963571037,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Gao2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Gulati2020",
+      "status": "success",
+      "accuracy": 0.5473186119873817,
+      "macro_f1": 0.3333333333333333,
+      "weighted_f1": 0.5473186119873817,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Gulati2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Karaayvas2018",
+      "status": "success",
+      "accuracy": 0.1590612777053455,
+      "macro_f1": 0.35103851086110444,
+      "weighted_f1": 0.0908087278714607,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Karaayvas2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Qian2020",
+      "status": "success",
+      "accuracy": 0.6563463747959122,
+      "macro_f1": 0.5714285714285714,
+      "weighted_f1": 0.6563463747959122,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Qian2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "breast",
+      "dataset": "Wu2021",
+      "status": "success",
+      "accuracy": 0.7010713143588103,
+      "macro_f1": 0.5671873452850744,
+      "weighted_f1": 0.6881514193875888,
+      "results_dir": "evaluation_results_mllmcelltype/breast_Wu2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "colorectal",
+      "dataset": "Lee2020",
+      "status": "success",
+      "accuracy": 0.44105831832663805,
+      "macro_f1": 0.5615758712779355,
+      "weighted_f1": 0.4139193141143577,
+      "results_dir": "evaluation_results_mllmcelltype/colorectal_Lee2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "colorectal",
+      "dataset": "Li2017",
+      "status": "success",
+      "accuracy": 0.3644067796610169,
+      "macro_f1": 0.5566127290580366,
+      "weighted_f1": 0.20966328561392228,
+      "results_dir": "evaluation_results_mllmcelltype/colorectal_Li2017",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "head_neck",
+      "dataset": "Chen2020",
+      "status": "success",
+      "accuracy": 0.7895571380883498,
+      "macro_f1": 0.44403220334675103,
+      "weighted_f1": 0.7109204071620803,
+      "results_dir": "evaluation_results_mllmcelltype/head_neck_Chen2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "head_neck",
+      "dataset": "Kurten2021",
+      "status": "success",
+      "accuracy": 0.8053429027113238,
+      "macro_f1": 0.6079549490093459,
+      "weighted_f1": 0.8019225922593107,
+      "results_dir": "evaluation_results_mllmcelltype/head_neck_Kurten2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "head_neck",
+      "dataset": "Puram2017",
+      "status": "success",
+      "accuracy": 0.5698068451372416,
+      "macro_f1": 0.7142857142857143,
+      "weighted_f1": 0.5698068451372416,
+      "results_dir": "evaluation_results_mllmcelltype/head_neck_Puram2017",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Caron2020",
+      "status": "success",
+      "accuracy": 0.06669346195069668,
+      "macro_f1": 0.06182487627214549,
+      "weighted_f1": 0.008343241376331287,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Caron2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Galen2019",
+      "status": "success",
+      "accuracy": 0.4391471011020604,
+      "macro_f1": 0.32218002278769464,
+      "weighted_f1": 0.3581823510560646,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Galen2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Giustacchini2017",
+      "status": "success",
+      "accuracy": 0.10144293834717971,
+      "macro_f1": 0.09210003969829297,
+      "weighted_f1": 0.018685797297773477,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Giustacchini2017",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Liu2021",
+      "status": "success",
+      "accuracy": 0.7697303496652709,
+      "macro_f1": 0.6029773563053045,
+      "weighted_f1": 0.6765940973383626,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Liu2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Nam2019",
+      "status": "success",
+      "accuracy": 0.2616471627290793,
+      "macro_f1": 0.4233878136148869,
+      "weighted_f1": 0.18826188503758684,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Nam2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Rendeiro2020",
+      "status": "success",
+      "accuracy": 0.23375541486171275,
+      "macro_f1": 0.17201743163523742,
+      "weighted_f1": 0.10057666616102946,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Rendeiro2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Roider2020",
+      "status": "success",
+      "accuracy": 0.3593741141788083,
+      "macro_f1": 0.5080968819286577,
+      "weighted_f1": 0.19143703448660657,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Roider2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Steen2021",
+      "status": "success",
+      "accuracy": 0.824476562070671,
+      "macro_f1": 0.4751246105919003,
+      "weighted_f1": 0.7454472708434874,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Steen2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "hematologic",
+      "dataset": "Wu2020",
+      "status": "success",
+      "accuracy": 0.39679088867302936,
+      "macro_f1": 0.3856238932076499,
+      "weighted_f1": 0.38100318167644925,
+      "results_dir": "evaluation_results_mllmcelltype/hematologic_Wu2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "kidney",
+      "dataset": "Krishna2021",
+      "status": "success",
+      "accuracy": 0.8650610044057077,
+      "macro_f1": 0.5611695119391275,
+      "weighted_f1": 0.8268255964598453,
+      "results_dir": "evaluation_results_mllmcelltype/kidney_Krishna2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "kidney",
+      "dataset": "Obradovic2021",
+      "status": "success",
+      "accuracy": 0.22152570648602193,
+      "macro_f1": 0.18604320269046695,
+      "weighted_f1": 0.18806319968105548,
+      "results_dir": "evaluation_results_mllmcelltype/kidney_Obradovic2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "kidney",
+      "dataset": "Young2018",
+      "status": "success",
+      "accuracy": 0.2177178976977601,
+      "macro_f1": 0.43880960836919886,
+      "weighted_f1": 0.17437063604167088,
+      "results_dir": "evaluation_results_mllmcelltype/kidney_Young2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "kidney",
+      "dataset": "Zhang2021",
+      "status": "success",
+      "accuracy": 0.5697563954671914,
+      "macro_f1": 0.5870430820808501,
+      "weighted_f1": 0.4870436103529131,
+      "results_dir": "evaluation_results_mllmcelltype/kidney_Zhang2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "liver",
+      "dataset": "Ma2019",
+      "status": "success",
+      "accuracy": 0.3333333333333333,
+      "macro_f1": 0.5714285714285714,
+      "weighted_f1": 0.3333333333333333,
+      "results_dir": "evaluation_results_mllmcelltype/liver_Ma2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "liver",
+      "dataset": "Sun2021",
+      "status": "success",
+      "accuracy": 0.8341011031640199,
+      "macro_f1": 0.6707070707070707,
+      "weighted_f1": 0.8320902074447958,
+      "results_dir": "evaluation_results_mllmcelltype/liver_Sun2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Chan2021",
+      "status": "success",
+      "accuracy": 0.41086058480072,
+      "macro_f1": 0.6800699317491833,
+      "weighted_f1": 0.3869910252466051,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Chan2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Kim2020",
+      "status": "success",
+      "accuracy": 0.6134859815960361,
+      "macro_f1": 0.5900977958844644,
+      "weighted_f1": 0.5882302722187716,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Kim2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Laughney2020",
+      "status": "success",
+      "accuracy": 0.8783853845204296,
+      "macro_f1": 0.38068705546317066,
+      "weighted_f1": 0.8661773979614777,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Laughney2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Qian2020",
+      "status": "success",
+      "accuracy": 0.7553370992590419,
+      "macro_f1": 0.5988526455194684,
+      "weighted_f1": 0.7089088314514043,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Qian2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Song2019",
+      "status": "success",
+      "accuracy": 0.8442772457820338,
+      "macro_f1": 0.31580726965342354,
+      "weighted_f1": 0.828259901731437,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Song2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Xing2021",
+      "status": "success",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Xing2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "lung",
+      "dataset": "Zilionis2019",
+      "status": "success",
+      "accuracy": 0.8718688861092402,
+      "macro_f1": 0.6666666666666666,
+      "weighted_f1": 0.8718688861092402,
+      "results_dir": "evaluation_results_mllmcelltype/lung_Zilionis2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "neuroendocrine",
+      "dataset": "Dong2020",
+      "status": "success",
+      "accuracy": 0.029878601195868815,
+      "macro_f1": 0.530715087781194,
+      "weighted_f1": 0.0188056779791451,
+      "results_dir": "evaluation_results_mllmcelltype/neuroendocrine_Dong2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "neuroendocrine",
+      "dataset": "Jansky2021",
+      "status": "success",
+      "accuracy": 0.5659034414611929,
+      "macro_f1": 0.7851957621953307,
+      "weighted_f1": 0.4115442240940611,
+      "results_dir": "evaluation_results_mllmcelltype/neuroendocrine_Jansky2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "neuroendocrine",
+      "dataset": "Kildisiute2021",
+      "status": "success",
+      "accuracy": 0.859149216650611,
+      "macro_f1": 0.7941359069872446,
+      "weighted_f1": 0.8052867895942961,
+      "results_dir": "evaluation_results_mllmcelltype/neuroendocrine_Kildisiute2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "neuroendocrine",
+      "dataset": "Rao2020",
+      "status": "success",
+      "accuracy": 0.06246043469086305,
+      "macro_f1": 0.3333333333333333,
+      "weighted_f1": 0.06246043469086305,
+      "results_dir": "evaluation_results_mllmcelltype/neuroendocrine_Rao2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Geistlinger2020",
+      "status": "success",
+      "accuracy": 0.813433745217031,
+      "macro_f1": 0.6612154535889544,
+      "weighted_f1": 0.8059818288993,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Geistlinger2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Izar2020",
+      "status": "success",
+      "accuracy": 0.7956062291434928,
+      "macro_f1": 0.46423884078575123,
+      "weighted_f1": 0.7887162651921708,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Izar2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Nath2021",
+      "status": "success",
+      "accuracy": 0.18272664094514607,
+      "macro_f1": 0.473004955560375,
+      "weighted_f1": 0.10376379182471072,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Nath2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Olalekan2021",
+      "status": "success",
+      "accuracy": 0.5557916034395549,
+      "macro_f1": 0.6764825218186897,
+      "weighted_f1": 0.5567154114878402,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Olalekan2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Olbrecht2021",
+      "status": "success",
+      "accuracy": 0.5898377125193199,
+      "macro_f1": 0.6126649297163805,
+      "weighted_f1": 0.5722540085188134,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Olbrecht2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Qian2020",
+      "status": "success",
+      "accuracy": 0.5331838829567577,
+      "macro_f1": 0.5714285714285714,
+      "weighted_f1": 0.5331838829567577,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Qian2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Regner2021",
+      "status": "success",
+      "accuracy": 0.5594529043350117,
+      "macro_f1": 0.7142857142857143,
+      "weighted_f1": 0.5594529043350117,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Regner2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Shih2018",
+      "status": "success",
+      "accuracy": 0.30495759947814743,
+      "macro_f1": 0.44331589560623275,
+      "weighted_f1": 0.2786006248420098,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Shih2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Tang-Huau2018",
+      "status": "success",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Tang-Huau2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "ovarian",
+      "dataset": "Zhang2022",
+      "status": "success",
+      "accuracy": 0.7854246321399606,
+      "macro_f1": 0.6384607857527277,
+      "weighted_f1": 0.7669279010574794,
+      "results_dir": "evaluation_results_mllmcelltype/ovarian_Zhang2022",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "pancreas",
+      "dataset": "Lin2020",
+      "status": "success",
+      "accuracy": 0.2634999330028139,
+      "macro_f1": 0.6666666666666666,
+      "weighted_f1": 0.2634999330028139,
+      "results_dir": "evaluation_results_mllmcelltype/pancreas_Lin2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "pancreas",
+      "dataset": "Moncada2020",
+      "status": "success",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "results_dir": "evaluation_results_mllmcelltype/pancreas_Moncada2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "pancreas",
+      "dataset": "Peng2019",
+      "status": "success",
+      "accuracy": 0.5475262047007476,
+      "macro_f1": 0.5555381784912472,
+      "weighted_f1": 0.5076647152465747,
+      "results_dir": "evaluation_results_mllmcelltype/pancreas_Peng2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "pancreas",
+      "dataset": "Raghavan2021",
+      "status": "success",
+      "accuracy": 0.6762248074717352,
+      "macro_f1": 0.677950774553747,
+      "weighted_f1": 0.6652642648607878,
+      "results_dir": "evaluation_results_mllmcelltype/pancreas_Raghavan2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "pancreas",
+      "dataset": "Steele2020",
+      "status": "success",
+      "accuracy": 0.6199505867819641,
+      "macro_f1": 0.6116267817517477,
+      "weighted_f1": 0.56648001492188,
+      "results_dir": "evaluation_results_mllmcelltype/pancreas_Steele2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "prostate",
+      "dataset": "Chen2021",
+      "status": "success",
+      "accuracy": 0.38727212826707663,
+      "macro_f1": 0.46736833466691285,
+      "weighted_f1": 0.3116381861402331,
+      "results_dir": "evaluation_results_mllmcelltype/prostate_Chen2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "prostate",
+      "dataset": "Dong2020",
+      "status": "success",
+      "accuracy": 0.24788653015216983,
+      "macro_f1": 0.5884439131301056,
+      "weighted_f1": 0.2302206864712514,
+      "results_dir": "evaluation_results_mllmcelltype/prostate_Dong2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "prostate",
+      "dataset": "He2021",
+      "status": "success",
+      "accuracy": 0.5152073732718894,
+      "macro_f1": 0.3262798634812286,
+      "weighted_f1": 0.4837828911152703,
+      "results_dir": "evaluation_results_mllmcelltype/prostate_He2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "prostate",
+      "dataset": "Song2022",
+      "status": "success",
+      "accuracy": 0.757025249505588,
+      "macro_f1": 0.6376856508819524,
+      "weighted_f1": 0.6823148177695526,
+      "results_dir": "evaluation_results_mllmcelltype/prostate_Song2022",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "scarcoma",
+      "dataset": "Jerby-Arnon2021",
+      "status": "success",
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "results_dir": "evaluation_results_mllmcelltype/scarcoma_Jerby-Arnon2021",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Biermann2022",
+      "status": "success",
+      "accuracy": 0.3278602352288407,
+      "macro_f1": 0.7068490442322692,
+      "weighted_f1": 0.31763480147259543,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Biermann2022",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Jerby-Arnon2018",
+      "status": "success",
+      "accuracy": 0.9572780406345672,
+      "macro_f1": 0.7347463070006423,
+      "weighted_f1": 0.948552553750683,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Jerby-Arnon2018",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Ji2020",
+      "status": "success",
+      "accuracy": 0.7406776845776929,
+      "macro_f1": 0.6749259022896196,
+      "weighted_f1": 0.6521954885390385,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Ji2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Li2019",
+      "status": "success",
+      "accuracy": 0.5902394812091504,
+      "macro_f1": 0.27414217431099364,
+      "weighted_f1": 0.5170328861887309,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Li2019",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Paulson2020",
+      "status": "success",
+      "accuracy": 0.27944926058133607,
+      "macro_f1": 0.3758055344958302,
+      "weighted_f1": 0.19537575065946686,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Paulson2020",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Tirosh2016",
+      "status": "success",
+      "accuracy": 0.6114101184068891,
+      "macro_f1": 0.5504664970313825,
+      "weighted_f1": 0.5935485638063309,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Tirosh2016",
+      "cells_filtered": false
+    },
+    {
+      "tissue": "skin",
+      "dataset": "Yost2019",
+      "status": "success",
+      "accuracy": 0.9524707132555728,
+      "macro_f1": 0.5714285714285714,
+      "weighted_f1": 0.9524707132555728,
+      "results_dir": "evaluation_results_mllmcelltype/skin_Yost2019",
+      "cells_filtered": false
+    }
+  ]
+}

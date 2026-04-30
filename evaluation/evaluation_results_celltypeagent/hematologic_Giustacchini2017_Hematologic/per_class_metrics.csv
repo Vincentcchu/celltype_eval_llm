@@ -1,0 +1,3 @@
+Cell_Type_L3,precision,recall,f1_score,support
+Malignant,0.8985570616528203,1.0,0.946568401658222,2055.0
+Myeloid,0.0,0.0,0.0,232.0

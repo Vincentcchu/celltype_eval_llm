@@ -1,0 +1,135 @@
+{
+  "accuracy": 0.06914972547855765,
+  "macro_f1": 0.2058950555164201,
+  "weighted_f1": 0.08137463900597208,
+  "confusion_matrix": {
+    "labels": [
+      "Epithelial_non_malignant",
+      "Fibroblasts",
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        108,
+        0
+      ],
+      [
+        5551,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        250,
+        0
+      ],
+      [
+        0,
+        614,
+        0,
+        0,
+        0,
+        216
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Epithelial_non_malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Fibroblasts": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "Lymphoid": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 108
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 5551
+    },
+    "Myeloid": {
+      "precision": 0.6983240223463687,
+      "recall": 1.0,
+      "f1_score": 0.8223684210526315,
+      "support": 250
+    },
+    "Other_non_neoplastic": {
+      "precision": 1.0,
+      "recall": 0.26024096385542167,
+      "f1_score": 0.4130019120458891,
+      "support": 830
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Epithelial_non_malignant": 5551,
+      "Fibroblasts": 614,
+      "Myeloid": 358,
+      "Other_non_neoplastic": 216
+    },
+    "ground_truth": {
+      "Malignant": 5551,
+      "Other_non_neoplastic": 830,
+      "Myeloid": 250,
+      "Lymphoid": 108
+    }
+  },
+  "dataset_info": {
+    "total_cells": 6739,
+    "original_pred_cells": 6739,
+    "original_gt_cells": 6739,
+    "matched_cells": 6739,
+    "cells_filtered": false,
+    "unique_pred_labels": 6,
+    "unique_gt_labels": 6,
+    "standardized_pred_labels": 4,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 1297,
+    "last_updated": "2026-03-18T17:10:50.313613",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "accuracy": 0.11277405327052002,
+  "macro_f1": 0.03378165673407801,
+  "weighted_f1": 0.022858166136572003,
+  "confusion_matrix": {
+    "labels": [
+      "Endothelial",
+      "Fibroblasts",
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        81
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        204
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        613
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        47384
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        684
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        6224
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Endothelial": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 81
+    },
+    "Fibroblasts": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 204
+    },
+    "Lymphoid": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 613
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 47384
+    },
+    "Myeloid": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 684
+    },
+    "Other_non_neoplastic": {
+      "precision": 0.11277405327052002,
+      "recall": 1.0,
+      "f1_score": 0.20268994040446803,
+      "support": 6224
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Other_non_neoplastic": 55190
+    },
+    "ground_truth": {
+      "Malignant": 47384,
+      "Other_non_neoplastic": 6224,
+      "Myeloid": 684,
+      "Lymphoid": 613,
+      "Fibroblasts": 204,
+      "Endothelial": 81
+    }
+  },
+  "dataset_info": {
+    "total_cells": 55190,
+    "original_pred_cells": 55190,
+    "original_gt_cells": 55190,
+    "matched_cells": 55190,
+    "cells_filtered": false,
+    "unique_pred_labels": 1,
+    "unique_gt_labels": 9,
+    "standardized_pred_labels": 1,
+    "standardized_gt_labels": 6,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2790,
+    "last_updated": "2026-04-24T01:33:54.017686",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

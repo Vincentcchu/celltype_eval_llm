@@ -1,0 +1,7 @@
+Metric,Value
+Accuracy,0.9554705905070868
+Macro F1,0.8051274524193944
+Weighted F1,0.9369738594246056
+Total Cells,51786.0
+Unique Pred Labels (L3),5.0
+Unique GT Labels (L3),6.0

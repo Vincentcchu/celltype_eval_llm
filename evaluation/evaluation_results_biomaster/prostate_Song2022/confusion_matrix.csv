@@ -1,0 +1,8 @@
+True_Label,Benign,Endothelial,Epithelial_non_malignant,Fibroblasts,Lymphoid,Malignant,Myeloid
+Benign,0,0,0,0,0,0,0
+Endothelial,0,1332,0,0,0,0,0
+Epithelial_non_malignant,8664,0,0,0,0,0,0
+Fibroblasts,625,0,0,651,0,0,0
+Lymphoid,178,0,0,0,2535,0,0
+Malignant,4658,0,0,0,0,0,0
+Myeloid,277,0,0,0,0,0,2823

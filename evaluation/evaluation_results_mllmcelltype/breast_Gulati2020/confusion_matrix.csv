@@ -1,0 +1,4 @@
+True_Label,Endothelial,Epithelial_non_malignant,Malignant
+Endothelial,0,0,0
+Epithelial_non_malignant,0,1041,0
+Malignant,861,0,0

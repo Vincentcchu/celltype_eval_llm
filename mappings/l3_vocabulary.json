@@ -9,8 +9,7 @@
     "Epithelial_non_malignant",
     "Malignant",
     "Benign",
-    "Other_non_neoplastic",
-    "Other/unknown"
+    "Other_non_neoplastic"
   ],
   "parent_child_structure": {
     "note": "Fields exist but are currently empty. Design must work without populated hierarchy."

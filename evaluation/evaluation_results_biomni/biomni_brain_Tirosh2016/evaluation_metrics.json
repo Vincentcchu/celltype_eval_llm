@@ -1,0 +1,79 @@
+{
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "confusion_matrix": {
+    "labels": [
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        4089,
+        0,
+        0
+      ],
+      [
+        0,
+        235,
+        0
+      ],
+      [
+        0,
+        0,
+        23
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Malignant": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 4089
+    },
+    "Myeloid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 235
+    },
+    "Other_non_neoplastic": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 23
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Malignant": 4089,
+      "Myeloid": 235,
+      "Other_non_neoplastic": 23
+    },
+    "ground_truth": {
+      "Malignant": 4089,
+      "Myeloid": 235,
+      "Other_non_neoplastic": 23
+    }
+  },
+  "dataset_info": {
+    "total_cells": 4347,
+    "original_pred_cells": 4347,
+    "original_gt_cells": 4347,
+    "matched_cells": 4347,
+    "cells_filtered": false,
+    "unique_pred_labels": 3,
+    "unique_gt_labels": 3,
+    "standardized_pred_labels": 3,
+    "standardized_gt_labels": 3,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2789,
+    "last_updated": "2026-04-21T19:42:54.074716",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

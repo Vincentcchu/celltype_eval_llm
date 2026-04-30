@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.46885481552467656,
+  "macro_f1": 0.46468488363431726,
+  "weighted_f1": 0.4022862925027745,
+  "confusion_matrix": {
+    "labels": [
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        10863,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16169,
+        0
+      ],
+      [
+        0,
+        0,
+        3801,
+        0
+      ],
+      [
+        0,
+        0,
+        1567,
+        992
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Lymphoid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 10863
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 16169
+    },
+    "Myeloid": {
+      "precision": 0.1764869759019362,
+      "recall": 1.0,
+      "f1_score": 0.30002367984844897,
+      "support": 3801
+    },
+    "Other_non_neoplastic": {
+      "precision": 1.0,
+      "recall": 0.38765142633841343,
+      "f1_score": 0.55871585468882,
+      "support": 2559
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Myeloid": 21537,
+      "Lymphoid": 10863,
+      "Other_non_neoplastic": 992
+    },
+    "ground_truth": {
+      "Malignant": 16169,
+      "Lymphoid": 10863,
+      "Myeloid": 3801,
+      "Other_non_neoplastic": 2559
+    }
+  },
+  "dataset_info": {
+    "total_cells": 33392,
+    "original_pred_cells": 33392,
+    "original_gt_cells": 33392,
+    "matched_cells": 33392,
+    "cells_filtered": false,
+    "unique_pred_labels": 8,
+    "unique_gt_labels": 8,
+    "standardized_pred_labels": 3,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2789,
+    "last_updated": "2026-04-21T19:42:54.074716",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

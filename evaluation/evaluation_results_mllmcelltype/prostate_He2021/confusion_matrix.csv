@@ -1,0 +1,6 @@
+True_Label,Epithelial_non_malignant,Lymphoid,Malignant,Myeloid,Other_non_neoplastic
+Epithelial_non_malignant,0,0,0,0,0
+Lymphoid,0,933,0,0,0
+Malignant,836,0,0,0,0
+Myeloid,0,0,0,185,0
+Other_non_neoplastic,0,0,0,216,0

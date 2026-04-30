@@ -1,0 +1,96 @@
+{
+  "accuracy": 0.44755384923755337,
+  "macro_f1": 0.4422338913897015,
+  "weighted_f1": 0.41034428839706577,
+  "confusion_matrix": {
+    "labels": [
+      "Lymphoid",
+      "Malignant",
+      "Myeloid",
+      "Other_non_neoplastic"
+    ],
+    "matrix": [
+      [
+        8227,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        97030
+      ],
+      [
+        7078,
+        0,
+        70781,
+        0
+      ],
+      [
+        0,
+        0,
+        3382,
+        8073
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Lymphoid": {
+      "precision": 0.5375367526951976,
+      "recall": 1.0,
+      "f1_score": 0.6992180860105388,
+      "support": 8227
+    },
+    "Malignant": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 97030
+    },
+    "Myeloid": {
+      "precision": 0.9543977455065195,
+      "recall": 0.9090920767027576,
+      "f1_score": 0.9311941692649748,
+      "support": 77859
+    },
+    "Other_non_neoplastic": {
+      "precision": 0.07681036697334995,
+      "recall": 0.7047577477084243,
+      "f1_score": 0.13852331028329243,
+      "support": 11455
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Other_non_neoplastic": 105103,
+      "Myeloid": 74163,
+      "Lymphoid": 15305
+    },
+    "ground_truth": {
+      "Malignant": 97030,
+      "Myeloid": 77859,
+      "Other_non_neoplastic": 11455,
+      "Lymphoid": 8227
+    }
+  },
+  "dataset_info": {
+    "total_cells": 194571,
+    "original_pred_cells": 194571,
+    "original_gt_cells": 194571,
+    "matched_cells": 194571,
+    "cells_filtered": false,
+    "unique_pred_labels": 9,
+    "unique_gt_labels": 11,
+    "standardized_pred_labels": 3,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2147,
+    "last_updated": "2026-03-26T12:34:03.314881",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

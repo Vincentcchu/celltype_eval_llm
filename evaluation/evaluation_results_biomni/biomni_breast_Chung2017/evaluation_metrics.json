@@ -1,0 +1,97 @@
+{
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "confusion_matrix": {
+    "labels": [
+      "Fibroblasts",
+      "Lymphoid",
+      "Malignant",
+      "Myeloid"
+    ],
+    "matrix": [
+      [
+        23,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        137,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        317,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        38
+      ]
+    ]
+  },
+  "per_class_metrics": {
+    "Fibroblasts": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 23
+    },
+    "Lymphoid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 137
+    },
+    "Malignant": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 317
+    },
+    "Myeloid": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "support": 38
+    }
+  },
+  "label_counts": {
+    "predictions": {
+      "Malignant": 317,
+      "Lymphoid": 137,
+      "Myeloid": 38,
+      "Fibroblasts": 23
+    },
+    "ground_truth": {
+      "Malignant": 317,
+      "Lymphoid": 137,
+      "Myeloid": 38,
+      "Fibroblasts": 23
+    }
+  },
+  "dataset_info": {
+    "total_cells": 515,
+    "original_pred_cells": 515,
+    "original_gt_cells": 515,
+    "matched_cells": 515,
+    "cells_filtered": false,
+    "unique_pred_labels": 5,
+    "unique_gt_labels": 5,
+    "standardized_pred_labels": 4,
+    "standardized_gt_labels": 4,
+    "unmapped_predictions": 0,
+    "unmapped_ground_truth": 0
+  },
+  "mapping_store_stats": {
+    "total_mappings": 2789,
+    "last_updated": "2026-04-21T19:42:54.074716",
+    "file_path": "/cs/student/projects2/aisd/2024/shekchu/projects/celltype_eval_llm/mappings/label_mappings.json"
+  }
+}

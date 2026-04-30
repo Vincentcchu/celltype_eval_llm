@@ -1,0 +1,5 @@
+True_Label,Endothelial,Malignant,Myeloid,Other_non_neoplastic
+Endothelial,0,0,46,0
+Malignant,0,0,0,9916
+Myeloid,0,0,2396,0
+Other_non_neoplastic,0,0,248,3711
